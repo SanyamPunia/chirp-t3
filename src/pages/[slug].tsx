@@ -15,7 +15,7 @@ export const ProfileFeed = (props: { userId: string }) => {
     userId: props.userId,
   });
 
-  if (isLoading) <LoadingPage />;
+  if (isLoading) return <LoadingPage />;
 
   if (!data || data.length === 0) return <div>User has not posted</div>;
 
